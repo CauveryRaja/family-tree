@@ -2,7 +2,7 @@ import { Container, Copyrights } from "./Footer.styles";
 
 const Footer = () => {
     return <Container>
-        <Copyrights>&copy; 2023 React app - All rights reserved</Copyrights>
+        <Copyrights>&copy; 2023 Family Tree - All rights reserved</Copyrights>
     </Container>
 };
 

@@ -2,7 +2,7 @@ import { Container, Title } from "./Header.styles";
 
 const Header = () => {
     return <Container>
-        <Title>React app</Title>
+        <Title>Family Tree</Title>
     </Container>
 };
 
