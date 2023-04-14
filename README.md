@@ -28,3 +28,12 @@ npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Unit testing
+
+Run tests using below commands
+
+```bash
+npm test                      // Runs all tests
+npm run coverage              // Runs test with coverage and opens report
+```
