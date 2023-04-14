@@ -1,6 +1,6 @@
 class Person {
   constructor(name, age, gender, spouse, children, parents) {
-    this.id = name + age;
+    this.id = name.toLowerCase();
     this.name = name;
     this.age = age;
     this.gender = gender;
