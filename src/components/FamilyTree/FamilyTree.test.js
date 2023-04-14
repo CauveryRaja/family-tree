@@ -9,5 +9,6 @@ describe('FamilyTree', () => {
     render(<FamilyTree root={person} />);
 
     expect(screen.getByTestId('john-node')).toBeDefined();
+    expect(screen.getByTestId('legend')).toBeDefined();
   });
 });
