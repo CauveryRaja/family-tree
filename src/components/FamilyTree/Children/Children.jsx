@@ -3,12 +3,11 @@ import { Container, ConnectingLine } from './Children.style';
 import FamilyEntry from '../FamilyEntry';
 
 const Children = ({ nodes }) => {
-
-    return <Container width={computeChildrenTotalWidth(nodes)}>
-                <ConnectingLine hasSingleChild={nodes.length === 1}/>
+    return <Container data-testid="children" width={computeChildrenTotalWidth(nodes)}>
+                <ConnectingLine data-testid="connector" hasSingleChild={nodes.length === 1}/>
                 {
                     nodes.map(child => (
-                        <FamilyEntry person={child} isNested/>
+                        <FamilyEntry key={child.id} person={child} isNested/>
                     ))
                 }
     </Container>

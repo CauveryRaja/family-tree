@@ -5,7 +5,7 @@ const FamilyEntry = ({ person, isNested = false }) => {
     return <Container>
         {
            person.spouse ? (
-            <Pair>
+            <Pair data-testid="pair">
                 <Person data={person} isNested={isNested}/>
                 <Spouse data={person.spouse} />
             </Pair>

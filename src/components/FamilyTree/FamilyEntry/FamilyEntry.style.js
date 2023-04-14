@@ -48,33 +48,3 @@ export const Person = styled(Node)`
 `;
 
 export const Spouse = styled(Node)``;
-
-export const Children = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: ${({ width }) => `${width}px`};
-  padding: 20px 0;
-  position: relative;
-`;
-
-export const Line = styled.div`
-  width: ${({ hasSingleChild }) => (hasSingleChild ? '0px' : 'calc(100% - 100px)')};
-  height: 3px;
-  background-color: black;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  &::before {
-    content: '';
-    display: block;
-    width: 3px;
-    height: 68px;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-  }
-`;
