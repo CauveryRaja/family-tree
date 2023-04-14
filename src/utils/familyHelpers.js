@@ -1,8 +1,4 @@
-import {
-  NODE_WIDTH,
-  PAIR_WIDTH,
-  NODE_GAP,
-} from '../components/FamilyTree/FamilyEntry/FamilyEntry.style';
+import { NODE_WIDTH, PAIR_WIDTH, NODE_GAP } from './uiconstants';
 
 export const computeChildrenTotalWidth = (children) => {
   let sum = 0;

@@ -1,17 +1,18 @@
 import styled from 'styled-components';
+import { NODE_WIDTH, COLOR } from '../../../utils/uiconstants';
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: ${NODE_WIDTH}px;
 `;
 
 export const Indicator = styled.div`
   width: 50px;
   height: 50px;
-  background-color: ${({ gender }) => (gender === 'male' ? 'lightblue' : 'pink')};
+  background-color: ${({ gender }) => (gender === 'male' ? COLOR.LIGHTBLUE : COLOR.PINK)};
   border-radius: 50%;
 `;
 

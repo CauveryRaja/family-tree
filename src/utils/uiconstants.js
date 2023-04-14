@@ -1,18 +1,17 @@
 /* UI constants - useful till a complete Style Guide is ready */
 
-export const SPACING = {
-  SPACE_4: '4px',
-  SPACE_8: '8px',
-  SPACE_12: '12px',
-  SPACE_16: '16px',
-  SPACE_20: '20px',
-};
+export const NODE_GAP = 10;
+export const NODE_WIDTH = 100;
+export const PAIR_WIDTH = 210;
 
 export const COLOR = {
   WHITE: 'white',
   BLACK: 'black',
-  GREY: 'grey',
-  LIGHTGREY: 'lightgrey',
+  GREY1: 'grey',
+  GREY2: 'lightgrey',
+  GREY3: '#f0eeee',
+  LIGHTBLUE: 'lightblue',
+  PINK: 'pink',
 };
 
 export const DEVICES = {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { COLOR } from '../../utils/uiconstants';
 
 export const Container = styled.header`
-  background-color: ${COLOR.LIGHTGREY};
+  background-color: ${COLOR.GREY3};
   padding: 1em;
 `;
 

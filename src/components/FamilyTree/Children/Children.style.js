@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLOR } from '../../../utils/uiconstants';
 
 export const Container = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ export const Container = styled.div`
 export const ConnectingLine = styled.div`
   width: ${({ hasSingleChild }) => (hasSingleChild ? '0px' : 'calc(100% - 100px)')};
   height: 3px;
-  background-color: black;
+  background-color: ${COLOR.BLACK};
   position: absolute;
   top: 0;
   left: 50%;
@@ -23,7 +24,7 @@ export const ConnectingLine = styled.div`
     display: block;
     width: 3px;
     height: 68px;
-    background-color: black;
+    background-color: ${COLOR.BLACK};
     position: absolute;
     bottom: 0;
     left: 50%;
