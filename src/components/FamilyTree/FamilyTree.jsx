@@ -3,7 +3,7 @@ import { Container } from "./FamilyTree.style"
 
 const FamilyTree = ({ root }) => {
     return <Container>
-        <FamilyEntry data={root} />
+        <FamilyEntry person={root} />
     </Container>
 }
 
