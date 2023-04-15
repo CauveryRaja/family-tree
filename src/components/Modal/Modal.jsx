@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import { Container, Backdrop, Header, Content, EmptyContent } from "./Modal.styles";
+import { Container, Backdrop, Header, EmptyContent } from "./Modal.styles";
 import FamilyContext from "../../providers/FamilyProvider/FamilyContext";
+import Content from "./Content";
 
 const Modal = ({ visible, setVisible }) => {
     const { activeMember } = useContext(FamilyContext);
@@ -9,9 +10,7 @@ const Modal = ({ visible, setVisible }) => {
         <Container visible={visible}>
             <Header visible={visible}>Member Details</Header>
             {
-                activeMember ? <Content>
-                    { activeMember.name }
-                </Content>
+                activeMember ? <Content person={activeMember}/>
                 : <EmptyContent>
                 Please select a member to view their details
             </EmptyContent>

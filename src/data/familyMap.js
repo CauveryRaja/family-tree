@@ -14,25 +14,36 @@ const familyMap = {
   avi: makePerson('Avi', 34, 'female'),
 };
 
+function addCouple(personA, personB) {
+  familyMap[personA].spouse = familyMap[personB];
+  familyMap[personB].spouse = familyMap[personA];
+}
+
+function addChild(parent, child) {
+  let parentA = familyMap[parent],
+    parentB = familyMap[parent].spouse;
+  if (parentA.children && parentB.children) {
+    parentA.children.push(familyMap[child]);
+  } else {
+    parentA.children = parentB.children = [familyMap[child]];
+  }
+
+  familyMap[child].parents = [parentA, parentB];
+}
+
 // Level 0
-familyMap['shan'].spouse = familyMap['anga'];
-familyMap['anga'].spouse = familyMap['shan'];
-familyMap['shan'].children = familyMap['anga'].children = [
-  familyMap['chit'],
-  familyMap['ish'],
-  familyMap['satya'],
-  familyMap['avi'],
-];
+addCouple('shan', 'anga');
+addChild('shan', 'chit');
+addChild('shan', 'ish');
+addChild('shan', 'satya');
+addChild('shan', 'avi');
 
 // Level 1
-familyMap['chit'].spouse = familyMap['ambi'];
-familyMap['ambi'].spouse = familyMap['chit'];
-familyMap['chit'].children = familyMap['ambi'].children = [familyMap['drita'], familyMap['vrita']];
+addCouple('chit', 'ambi');
+addChild('chit', 'drita');
+addChild('chit', 'vrita');
 
-familyMap['satya'].spouse = familyMap['vyan'];
-familyMap['vyan'].spouse = familyMap['satya'];
-familyMap['satya'].children = familyMap['vyan'].children = [familyMap['vika']];
-
-// Level 2
+addCouple('satya', 'vyan');
+addChild('satya', 'vika');
 
 export default familyMap;

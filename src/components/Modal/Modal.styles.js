@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { COLOR, TRANSITION_DURATION } from '../../utils/uiconstants';
 
 export const Container = styled.div`
-  width: 600px;
+  width: 400px;
   height: 100%;
   position: absolute;
   background-color: white;
   z-index: 2;
   top: 0;
-  right: -600px;
+  right: -400px;
   overflow-y: auto;
   transform: ${({ visible }) => (visible ? 'translateX(-100%)' : 'translateX(0)')};
   transition: transform ${TRANSITION_DURATION};
@@ -23,14 +23,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-`;
-
-export const Content = styled.main`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  font-size: 20px;
 `;
 
 export const EmptyContent = styled.main`
