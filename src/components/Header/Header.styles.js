@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { COLOR, TRANSITION_DURATION } from '../../utils/uiconstants';
+import { COLOR, TRANSITION_DURATION } from '../../utils/uiConstants';
 
 export const Container = styled.header`
   display: flex;

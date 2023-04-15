@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR } from '../../../utils/uiconstants';
+import { COLOR } from '../../../utils/uiConstants';
 
 export const PersonRow = styled.div`
   display: flex;
