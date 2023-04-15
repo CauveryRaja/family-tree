@@ -11,6 +11,7 @@ const familyMap = {
   drita: makePerson('Drita', 30, 'male'),
   vrita: makePerson('Vrita', 27, 'male'),
   vika: makePerson('Vika', 24, 'female'),
+  avi: makePerson('Avi', 34, 'female'),
 };
 
 // Level 0
@@ -20,7 +21,7 @@ familyMap['shan'].children = familyMap['anga'].children = [
   familyMap['chit'],
   familyMap['ish'],
   familyMap['satya'],
-  familyMap['vika'],
+  familyMap['avi'],
 ];
 
 // Level 1

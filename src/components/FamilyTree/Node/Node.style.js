@@ -14,6 +14,11 @@ export const Indicator = styled.div`
   height: 50px;
   background-color: ${({ gender }) => (gender === 'male' ? COLOR.LIGHTBLUE : COLOR.PINK)};
   border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgreen;
+  }
 `;
 
 export const Label = styled.label`

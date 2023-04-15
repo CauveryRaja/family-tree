@@ -1,8 +1,12 @@
 /* UI constants - useful till a complete Style Guide is ready */
 
+// Tree related  constants
 export const NODE_GAP = 10;
 export const NODE_WIDTH = 100;
 export const PAIR_WIDTH = 210;
+
+// Animation constants
+export const TRANSITION_DURATION = '300ms';
 
 export const COLOR = {
   WHITE: 'white',
@@ -12,6 +16,7 @@ export const COLOR = {
   GREY3: '#f0eeee',
   LIGHTBLUE: 'lightblue',
   PINK: 'pink',
+  TRANSPARENTBLACK: '#000000cc',
 };
 
 export const DEVICES = {

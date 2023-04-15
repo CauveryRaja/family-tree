@@ -4,8 +4,7 @@ import { COLOR } from '../../utils/uiconstants';
 export const Container = styled.footer`
   position: fixed;
   bottom: 0;
-  background-color: ${COLOR.BLACK};
-  color: ${COLOR.WHITE};
+  background-color: ${COLOR.GREY3};
   width: 100%;
   padding: 1em;
 `;
