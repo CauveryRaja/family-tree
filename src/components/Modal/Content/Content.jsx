@@ -1,5 +1,6 @@
 import { Container, Icon, Name, NameRow, AgeRow, Label, Gender } from "./Content.style"
 import FamilyInfo from "../FamilyInfo";
+import RelativeInfo from "../RelativeInfo";
 
 const Content = ({ person }) => {
     return <Container>
@@ -18,6 +19,7 @@ const Content = ({ person }) => {
             </div>
         </AgeRow>
         <FamilyInfo person={person} />
+        <RelativeInfo person={person} />
     </Container>
 }
 
