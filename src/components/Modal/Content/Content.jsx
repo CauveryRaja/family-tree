@@ -3,19 +3,19 @@ import FamilyInfo from "../FamilyInfo";
 import RelativeInfo from "../RelativeInfo";
 
 const Content = ({ person }) => {
-    return <Container>
+    return <Container data-testid="member-details">
         <NameRow>
             <Icon gender={person.gender}>{person.name.charAt(0)}</Icon>
-            <Name>{person.name}</Name>
+            <Name data-testid="name">{person.name}</Name>
         </NameRow>
         <AgeRow>
             <div>
                 <Label>Age:</Label>
-                <span>{person.age}</span>
+                <span data-testid="age">{person.age}</span>
             </div>
             <div>
                 <Label>Gender:</Label>
-                <Gender>{person.gender === 'male' ? <>&#9794;</>: <>&#9792;</>} {person.gender}</Gender>
+                <Gender data-testid="gender">{person.gender === 'male' ? <>&#9794;</>: <>&#9792;</>} {person.gender}</Gender>
             </div>
         </AgeRow>
         <FamilyInfo person={person} />

@@ -22,23 +22,25 @@ const RelativeInfo = ({ person }) => {
     <Container>
       Select relation to identify person
       <Row>
-        <select value={selectedRelation} onChange={changeListener}>
+        <select data-testid="select-box" value={selectedRelation} onChange={changeListener}>
           <option>Select</option>
           {RELATIONS.map((relation) => (
-            <option value={relation.name}>{relation.displayName}</option>
+            <option key={relation.name} value={relation.name}>
+              {relation.displayName}
+            </option>
           ))}
         </select>
         <Arrow>&#8594;</Arrow>
 
-        {selectedPersons && selectedPersons.length ? (
-          <span>
-            {selectedPersons.map((person) => (
-              <PersonChip gender={person.gender}>{person.name}</PersonChip>
-            ))}
-          </span>
-        ) : (
-          'None'
-        )}
+        <span data-testid="relative">
+          {selectedPersons && selectedPersons.length
+            ? selectedPersons.map((person) => (
+                <PersonChip key={person.id} gender={person.gender}>
+                  {person.name}
+                </PersonChip>
+              ))
+            : 'None'}
+        </span>
       </Row>
     </Container>
   );

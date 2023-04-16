@@ -2,7 +2,7 @@ import { Label, PersonRow, PersonChip } from "./FamilyInfo.style";
 
 const FamilyInfo = ({ person }) => {
     return <>
-    { person.spouse && <PersonRow>
+    { person.spouse && <PersonRow data-testid="spouse">
             <Label>Spouse:</Label>
             <PersonChip gender={person.spouse.gender}>
                 {person.spouse.name}
@@ -10,7 +10,7 @@ const FamilyInfo = ({ person }) => {
         </PersonRow>
         }
         {
-            person.children && <PersonRow>
+            person.children && <PersonRow data-testid="children">
             <Label>Children:</Label>
             {
                 person?.children.map(child => (
@@ -22,7 +22,7 @@ const FamilyInfo = ({ person }) => {
             </PersonRow>
         }
         {
-            person.parents && <PersonRow>
+            person.parents && <PersonRow data-testid="parents">
             <Label>Parents:</Label>
             {
                 person?.parents.map(parent => (
