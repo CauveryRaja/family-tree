@@ -7,14 +7,15 @@ import { PersonChip } from '../FamilyInfo/FamilyInfo.style';
 
 const RelativeInfo = ({ person }) => {
   const [selectedRelation, setRelation] = useState();
-  const [selectedPerson, setPerson] = useState();
+  const [selectedPersons, setPersons] = useState([]);
 
   const changeListener = (event) => {
     setRelation(event.target.value);
   };
 
   useEffect(() => {
-    setPerson(findPersonByRelation(person, selectedRelation));
+    let relatedPersons = findPersonByRelation(person, selectedRelation) || [];
+    setPersons(relatedPersons instanceof Array ? relatedPersons : [relatedPersons]);
   }, [selectedRelation]);
 
   return (
@@ -28,8 +29,13 @@ const RelativeInfo = ({ person }) => {
           ))}
         </select>
         <Arrow>&#8594;</Arrow>
-        {selectedPerson ? (
-          <PersonChip gender={selectedPerson.gender}>{selectedPerson.name}</PersonChip>
+
+        {selectedPersons && selectedPersons.length ? (
+          <span>
+            {selectedPersons.map((person) => (
+              <PersonChip gender={person.gender}>{person.name}</PersonChip>
+            ))}
+          </span>
         ) : (
           'None'
         )}

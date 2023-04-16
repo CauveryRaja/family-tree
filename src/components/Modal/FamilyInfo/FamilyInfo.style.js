@@ -14,6 +14,7 @@ export const Label = styled.label`
 `;
 
 export const PersonChip = styled.div`
+  display: inline-block;
   padding: 5px 15px;
   background-color: ${({ gender }) => (gender === 'male' ? COLOR.LIGHTBLUE : COLOR.PINK)};
   border-radius: 25px;

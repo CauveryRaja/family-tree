@@ -8,12 +8,20 @@ export const RELATIONS = [
     name: 'grandmother',
   },
   {
-    displayName: 'Aunt',
-    name: 'aunt',
+    displayName: 'Brother',
+    name: 'brother',
+  },
+  {
+    displayName: 'Sister',
+    name: 'sister',
   },
   {
     displayName: 'Uncle',
     name: 'uncle',
+  },
+  {
+    displayName: 'Aunt',
+    name: 'aunt',
   },
   {
     displayName: 'Father In Law',
@@ -22,5 +30,13 @@ export const RELATIONS = [
   {
     displayName: 'Mother In Law',
     name: 'motherinlaw',
+  },
+  {
+    displayName: 'Brother In Law',
+    name: 'brotherinlaw',
+  },
+  {
+    displayName: 'Sister In Law',
+    name: 'sisterinlaw',
   },
 ];
