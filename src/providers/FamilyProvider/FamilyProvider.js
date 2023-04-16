@@ -1,12 +1,14 @@
 import FamilyContext from './FamilyContext';
 import { useState } from 'react';
-import defaultMap from '../../data/familyMap';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import ModalContext from '../ModalProvider/ModalContext';
+import { fetchFamilyTree } from '../../api/familyTree';
+
+const DEFAULT_TREE = fetchFamilyTree();
 
 const FamilyProvider = ({ children }) => {
-  const [familyMap, setFamilyMap] = useState(defaultMap);
+  const [familyTree, setFamilyTree] = useState(DEFAULT_TREE);
   const [activeMember, setActiveMember] = useState();
   const { modalVisible, toggleVisibility } = useContext(ModalContext);
 
@@ -23,9 +25,7 @@ const FamilyProvider = ({ children }) => {
   }, [modalVisible]);
 
   return (
-    <FamilyContext.Provider
-      value={{ familyTree: familyMap['shan'], activeMember, setActiveMember }}
-    >
+    <FamilyContext.Provider value={{ familyTree: familyTree.root, activeMember, setActiveMember }}>
       {children}
     </FamilyContext.Provider>
   );
