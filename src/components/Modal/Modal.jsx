@@ -8,10 +8,10 @@ const Modal = ({ visible, setVisible }) => {
 
      return <div>
         <Container visible={visible}>
-            <Header visible={visible}>Member Details</Header>
+            <Header data-testid="header" visible={visible}>Member Details</Header>
             {
-                activeMember ? <Content person={activeMember}/>
-                : <EmptyContent>
+                activeMember ? <Content data-testid="member-details" person={activeMember}/>
+                : <EmptyContent data-testid="empty-content">
                 Please select a member to view their details
             </EmptyContent>
             }
