@@ -1,7 +1,7 @@
 import { makeFamilyTree } from '../models/FamilyTree';
 import { makePerson } from '../models/Person';
 
-const dictionary = {
+export const dictionary = {
   shan: makePerson('Shan', 83, 'male'),
   anga: makePerson('Anga', 79, 'female'),
   chit: makePerson('Chit', 56, 'male'),
