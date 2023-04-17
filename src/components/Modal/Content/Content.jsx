@@ -1,4 +1,4 @@
-import { Container, Icon, Name, NameRow, AgeRow, Label, Gender } from "./Content.style"
+import { Container, Icon, Name, NameRow, AgeRow, Label, Gender, GenderIcon } from "./Content.style"
 import FamilyInfo from "../FamilyInfo";
 import RelativeInfo from "../RelativeInfo";
 
@@ -15,7 +15,11 @@ const Content = ({ person }) => {
             </div>
             <div>
                 <Label>Gender:</Label>
-                <Gender data-testid="gender">{person.gender === 'male' ? <>&#9794;</>: <>&#9792;</>} {person.gender}</Gender>
+                <Gender data-testid="gender"> 
+                    <GenderIcon gender={person.gender}>{
+                        person.gender === 'male' ? <>&#9794;</> : <>&#9792;</>
+                    }
+                    </GenderIcon> {person.gender === 'male' ? 'Man' : 'Woman'}</Gender>
             </div>
         </AgeRow>
         <FamilyInfo person={person} />

@@ -12,11 +12,11 @@ const FamilyTree = ({ root }) => {
             <Legend data-testid="legend">
                 <LegendRow>
                     <Indicator gender="male"/>
-                    <label>Male</label>
+                    <label>Man</label>
                 </LegendRow>
                 <LegendRow>
                     <Indicator gender="female"/>
-                    <label>Female</label>
+                    <label>Woman</label>
                 </LegendRow>
             </Legend>
         </InfoSection>

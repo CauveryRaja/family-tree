@@ -9,20 +9,22 @@ export const Container = styled.main`
 
 export const NameRow = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
+  border-bottom: 1px solid ${COLOR.GREY2};
 `;
 
 export const Icon = styled.div`
-  width: 45px;
-  height: 45px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 30px;
   background-color: ${({ gender }) => (gender === 'male' ? COLOR.LIGHTBLUE : COLOR.PINK)};
 `;
 
@@ -42,4 +44,10 @@ export const Label = styled.label`
 
 export const Gender = styled.span`
   text-transform: capitalize;
+`;
+
+export const GenderIcon = styled.span`
+  background-color: ${({ gender }) => (gender === 'male' ? COLOR.LIGHTBLUE : COLOR.PINK)};
+  border-radius: 50%;
+  padding: 1px 2px;
 `;

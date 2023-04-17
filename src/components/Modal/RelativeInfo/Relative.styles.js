@@ -7,7 +7,7 @@ export const Container = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
-  padding: 30px;
+  padding: 25px;
   border-top: 1px solid ${COLOR.GREY2};
   border-bottom: 1px solid ${COLOR.GREY2};
 
