@@ -13,6 +13,7 @@ export const Container = styled.section`
 export const Greeting = styled.p`
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 24px;
+  text-align: center;
 `;
 
 export const InfoSection = styled.section`
@@ -25,6 +26,7 @@ export const InfoSection = styled.section`
 
 export const Message = styled.p`
   font-size: 18px;
+  text-align: center;
 `;
 
 export const Legend = styled.div`

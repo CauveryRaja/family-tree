@@ -4,7 +4,7 @@ import { Container, Greeting, InfoSection, Legend, LegendRow, Message, Indicator
 const FamilyTree = ({ root }) => {
     return <Container data-testid="tree-container">
         <Greeting>
-            <p>Take a look at {root.name}'s family tree</p>
+            <span>Take a look at {root.name}'s family tree</span>
         </Greeting>
         <FamilyEntry person={root} />
         <InfoSection>
