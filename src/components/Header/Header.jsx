@@ -8,7 +8,7 @@ const Header = () => {
 
     return <Container>
         <Title>Family Tree</Title>
-        <BurgerButton data-testid="burger-button" onClick={() => toggleVisibility(!modalVisible)}>
+        <BurgerButton aria-label="burger button" data-testid="burger-button" onClick={() => toggleVisibility(!modalVisible)}>
             <Bar1 visible={modalVisible}/>
             <Bar2 visible={modalVisible}/>
             <Bar3 visible={modalVisible}/>

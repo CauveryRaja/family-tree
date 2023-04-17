@@ -9,11 +9,12 @@ export const Wrapper = styled.div`
   width: ${NODE_WIDTH}px;
 `;
 
-export const Indicator = styled.div`
+export const Indicator = styled.button`
   width: 50px;
   height: 50px;
   background-color: ${({ gender }) => (gender === 'male' ? COLOR.LIGHTBLUE : COLOR.PINK)};
   border-radius: 50%;
+  border: none;
   cursor: pointer;
 
   &:hover {

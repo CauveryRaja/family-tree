@@ -9,15 +9,23 @@ describe('Children', () => {
     render(<Children nodes={children} />);
 
     expect(screen.getByTestId('children')).toBeDefined();
-    expect(screen.getByTestId('raja-node')).toBeDefined();
-    expect(screen.getByTestId('priya-node')).toBeDefined();
     expect(screen.getByTestId('connector')).toBeDefined();
+    expect(
+      screen.getAllByRole('button', {
+        name: 'raja',
+      })[0],
+    ).toBeInTheDocument();
+    expect(screen.getByTestId('priya-node')).toBeDefined();
   });
 
   it('should not display horizontal connecting line for a single child', () => {
-    render(<Children nodes={[makePerson('raja', 25, 'female')]} />);
+    render(<Children nodes={[makePerson('raja', 25, 'male')]} />);
 
-    expect(screen.getByTestId('raja-node')).toBeDefined();
+    expect(
+      screen.getByRole('button', {
+        name: 'raja',
+      }),
+    ).toBeInTheDocument();
     expect(screen.getByTestId('connector')).toHaveStyle({
       width: 0,
     });

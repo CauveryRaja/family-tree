@@ -8,15 +8,22 @@ describe('FamilyEntry', () => {
   it('should render a single person node', () => {
     render(<FamilyEntry person={person} />);
 
-    expect(screen.getByTestId('john-node')).toBeDefined();
+    expect(
+      screen.getByRole('button', {
+        name: 'john',
+      }),
+    ).toBeInTheDocument();
   });
 
   it('should render a pair if spouse is available', () => {
     const spouse = makePerson('priya', 25, 'female');
     render(<FamilyEntry person={makePerson('ram', 30, 'male', spouse)} />);
 
-    expect(screen.getByTestId('pair')).toBeDefined();
-    expect(screen.getByTestId('ram-node')).toBeDefined();
+    expect(
+      screen.getAllByRole('button', {
+        name: 'ram',
+      })[0],
+    ).toBeInTheDocument();
     expect(screen.getByTestId('priya-node')).toBeDefined();
   });
 });

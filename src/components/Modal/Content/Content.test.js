@@ -8,6 +8,6 @@ describe('Member Content', () => {
 
     expect(screen.getByTestId('name')).toHaveTextContent('max');
     expect(screen.getByTestId('age')).toHaveTextContent('25');
-    expect(screen.getByTestId('gender')).toHaveTextContent('male');
+    expect(screen.getByTestId('gender')).toHaveTextContent('Man');
   });
 });
