@@ -12,7 +12,7 @@ const Modal = ({ visible, setVisible }) => {
             {
                 activeMember ? <Content data-testid="member-details" person={activeMember}/>
                 : <EmptyContent data-testid="empty-content">
-                Please select a member to view their details
+                <strong>&#9432;</strong> Please select a member to view their details
             </EmptyContent>
             }
         </Container>

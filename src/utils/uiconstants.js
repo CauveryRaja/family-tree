@@ -16,6 +16,7 @@ export const COLOR = {
   GREY3: '#f0eeee',
   LIGHTBLUE: 'lightblue',
   PINK: 'pink',
+  GREEN: '#03d803',
   TRANSPARENTBLACK: '#000000cc',
 };
 

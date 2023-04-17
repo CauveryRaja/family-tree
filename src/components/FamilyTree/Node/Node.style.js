@@ -17,7 +17,7 @@ export const Indicator = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: lightgreen;
+    background-color: ${COLOR.GREEN};
   }
 `;
 

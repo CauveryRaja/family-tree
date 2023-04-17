@@ -32,8 +32,13 @@ export const EmptyContent = styled.main`
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  padding: 30px;
+  padding: 50px;
   font-size: 18px;
+  text-align: center;
+
+  strong {
+    font-size: 36px;
+  }
 `;
 
 export const Backdrop = styled.section`
