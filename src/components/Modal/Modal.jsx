@@ -6,7 +6,7 @@ import Content from "./Content";
 const Modal = ({ visible, setVisible }) => {
     const { activeMember } = useContext(FamilyContext);
 
-     return <div>
+     return <>
         <Container visible={visible}>
             <Header data-testid="header" visible={visible}>Member Details</Header>
             {
@@ -17,7 +17,7 @@ const Modal = ({ visible, setVisible }) => {
             }
         </Container>
         <Backdrop visible={visible} onClick={() => setVisible(false)}/>
-    </div>
+    </>
 }
 
 export default Modal;

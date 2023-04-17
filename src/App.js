@@ -6,17 +6,15 @@ import ModalProvider from './providers/ModalProvider';
 
 function App() {
   return (
-    <div>
-      <ModalProvider>
-        <Header />
-        <main>
-          <FamilyProvider>
-            <Home />
-          </FamilyProvider>
-        </main>
-        <Footer />
-      </ModalProvider>
-    </div>
+    <ModalProvider>
+      <Header />
+      <main>
+        <FamilyProvider>
+          <Home />
+        </FamilyProvider>
+      </main>
+      <Footer />
+    </ModalProvider>
   );
 }
 

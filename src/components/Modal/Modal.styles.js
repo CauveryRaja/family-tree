@@ -4,7 +4,7 @@ import { COLOR, TRANSITION_DURATION } from '../../utils/uiConstants';
 export const Container = styled.div`
   width: 400px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   background-color: white;
   z-index: 2;
   top: 0;
