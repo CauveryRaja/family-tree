@@ -20,7 +20,9 @@
     "prettier:fix": "prettier --write .",
     "prettier": "prettier --check .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "e2e": "cypress run",
+    "e2e:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +46,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "cypress": "^12.10.0",
     "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
