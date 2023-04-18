@@ -24,6 +24,11 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   font-size: 20px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
 `;
 
 export const EmptyContent = styled.main`

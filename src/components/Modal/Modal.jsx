@@ -8,7 +8,7 @@ const Modal = ({ visible, setVisible }) => {
 
      return <>
         <Container visible={visible}>
-            <Header data-testid="header" visible={visible}>Member Details</Header>
+            <Header data-testid="header" visible={visible}><h2>Member Details</h2></Header>
             {
                 activeMember ? <Content data-testid="member-details" person={activeMember}/>
                 : <EmptyContent data-testid="empty-content">

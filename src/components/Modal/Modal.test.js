@@ -11,10 +11,12 @@ describe('Modal', () => {
   it('should render Modal with header with empty content', () => {
     render(<Modal visible />);
 
-    expect(screen.getByTestId('header')).toBeDefined();
-    expect(screen.getByTestId('empty-content')).toHaveTextContent(
-      'Please select a member to view their details',
-    );
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+      }),
+    ).toHaveTextContent('Member Details');
+    expect(screen.getByText('Please select a member to view their details')).toBeInTheDocument();
   });
 
   it('should render Modal with Person details if a member is selected', () => {
@@ -24,7 +26,14 @@ describe('Modal', () => {
       </FamilyContext.Provider>,
     );
 
-    expect(screen.getByTestId('member-details')).toBeDefined();
-    expect(screen.queryByTestId('empty-content')).toBeNull();
+    expect(
+      screen.getByRole('heading', {
+        level: 2,
+      }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('john')).toBeInTheDocument();
+    expect(
+      screen.queryByText('Please select a member to view their details'),
+    ).not.toBeInTheDocument();
   });
 });

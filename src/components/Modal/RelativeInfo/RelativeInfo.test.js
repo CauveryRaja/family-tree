@@ -9,15 +9,16 @@ describe('RelativeInfo', () => {
   it('should render select box with no relative', () => {
     render(<RelativeInfo person={makePerson('max', 22, 'male')} />);
 
-    expect(screen.getByTestId('select-box')).toBeDefined();
-    expect(screen.getByTestId('relative')).toHaveTextContent('None');
+    expect(screen.getByText('Select relation to identify person')).toBeInTheDocument();
+    expect(screen.getByRole('menu')).toBeInTheDocument();
+    expect(screen.getByText('None')).toBeInTheDocument();
   });
 
   it('should fetch correct person as per selected relation', () => {
     const person = makePerson('max', 22, 'male');
     render(<RelativeInfo person={person} />);
 
-    fireEvent.change(screen.getByTestId('select-box'), {
+    fireEvent.change(screen.getByRole('menu'), {
       target: {
         value: 'brother',
       },

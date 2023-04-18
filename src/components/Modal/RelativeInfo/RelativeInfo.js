@@ -22,10 +22,15 @@ const RelativeInfo = ({ person }) => {
     <Container>
       Select relation to identify person
       <Row>
-        <select data-testid="select-box" value={selectedRelation} onChange={changeListener}>
+        <select
+          role="menu"
+          data-testid="select-box"
+          value={selectedRelation}
+          onChange={changeListener}
+        >
           <option>-- Select --</option>
           {RELATIONS.map((relation) => (
-            <option key={relation.name} value={relation.name}>
+            <option role="menuitem" key={relation.name} value={relation.name}>
               {relation.displayName}
             </option>
           ))}
