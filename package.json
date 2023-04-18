@@ -1,6 +1,7 @@
 {
   "name": "react-catalyst",
   "version": "0.1.0",
+  "homepage": "https://cauveryraja.github.io/family-tree",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
@@ -17,7 +18,9 @@
     "coverage": "jest --coverage && open coverage/lcov-report/index.html",
     "prepare": "husky install",
     "prettier:fix": "prettier --write .",
-    "prettier": "prettier --check ."
+    "prettier": "prettier --check .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +44,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
