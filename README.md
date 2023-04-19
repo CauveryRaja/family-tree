@@ -43,7 +43,7 @@ This setup is done using Jest and React Testing Library.
 Run unit tests using below commands
 
 ```bash
-npm test                      // Runs all tests
+npm test                      // Runs all unit tests
 npm run coverage              // Runs test with coverage and opens report
 ```
 
@@ -55,6 +55,7 @@ Run e2e tests using below commands
 npm run e2e                   // Runs all e2e tests
 npm run e2e:open              // Opens Cypress and runs all tests
 ```
+Make sure the app is running at [http://localhost:3000](http://localhost:3000) before running e2e tests.
 
 ## License
 This project is not licensed. Feel free to use it, happy coding :)
