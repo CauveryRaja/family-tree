@@ -1,6 +1,6 @@
-/* UI constants - useful till a complete Style Guide is ready */
+/* UI constants - Useful till a complete Style Guide is ready */
 
-// Tree related  constants
+// Tree related constants
 export const NODE_GAP = 10;
 export const NODE_WIDTH = 100;
 export const PAIR_WIDTH = 210;

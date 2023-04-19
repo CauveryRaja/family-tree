@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Node from '../Node';
-import { PAIR_WIDTH, NODE_GAP, COLOR } from '../../../utils/uiConstants';
+import { PAIR_WIDTH, NODE_GAP, COLOR } from '../../../utils/uiconstants';
 
 export const Container = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { NODE_WIDTH, COLOR } from '../../../utils/uiConstants';
+import { NODE_WIDTH, COLOR } from '../../../utils/uiconstants';
 
 export const Wrapper = styled.div`
   display: flex;

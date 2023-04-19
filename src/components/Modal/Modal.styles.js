@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLOR, TRANSITION_DURATION } from '../../utils/uiConstants';
+import { COLOR, TRANSITION_DURATION } from '../../utils/uiconstants';
 
 export const Container = styled.div`
   width: 400px;

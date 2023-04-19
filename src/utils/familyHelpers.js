@@ -1,4 +1,4 @@
-import { NODE_WIDTH, PAIR_WIDTH, NODE_GAP } from './uiConstants';
+import { NODE_WIDTH, PAIR_WIDTH, NODE_GAP } from './uiconstants';
 
 export const computeChildrenTotalWidth = (children) => {
   let sum = 0;
